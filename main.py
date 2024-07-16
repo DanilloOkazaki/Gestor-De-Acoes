@@ -1,4 +1,4 @@
-from functions import *
+from sql import *
 #criar a janela lista de ações
 lista_de_acoes = Tk()
 lista_de_acoes.title('Lista de Ações')
@@ -28,13 +28,15 @@ label_quantidade_acao = Label(adicionar_acoes, text='Coloque a quantidade de aç
 label_quantidade_acao.grid(column=0, row=5, padx=1, pady=1)
 quantidade_acao = Entry(adicionar_acoes, width=8)
 quantidade_acao.grid(column=0, row=6, padx=1, pady=1)
-botao_adicionar = Button(adicionar_acoes, text='Adicionar')
+#botão adicionar
+botao_adicionar = Button(adicionar_acoes, text='Adicionar', command='')
 botao_adicionar.grid(column=0, row=7, padx=1, pady=1)
+
+#fim janela adicionar ações
 
 
 
 #trocar de janelas
-
 menu_principal = Menu(lista_de_acoes)
 lista_de_acoes.config(menu=menu_principal)
 
@@ -57,3 +59,4 @@ menu_opcoes2.add_separator()
 
 adicionar_acoes.withdraw()
 lista_de_acoes.mainloop()
+
